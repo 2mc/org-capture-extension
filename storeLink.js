@@ -19,6 +19,14 @@ function storeIt() {
     var url = encodeURIComponent(location.href);
     var title = escapeIt(document.title);
 
+    var selection = window.getSelection().toString();
+    var idx=url.indexOf("#");
+
+    if (selection != '')
+        title = title + ((idx != -1) ? (' — ' + url.substring(idx + 1)) : "");
+    else
+        title = title + ' — ' + selection;
+    
     chrome.storage.sync.get({
         selectedTemplate: 'nql',
         unselectedTemplate: 'b',
