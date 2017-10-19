@@ -32,21 +32,21 @@
         },
         "do-capture": {
             "suggested_key": {
-                "default": "Alt+C"
+                "default": "Alt+Shift+C"
             },
             "description": "Capture a link.",
             "global": false
         },
         "do-store-link": {
             "suggested_key": {
-                "default": "Alt+L"
+                "default": "Alt+Shift+L"
             },
             "description": "Store a link.",
             "global": false
         },
         "do-open-source": {
             "suggested_key": {
-                "default": "Alt+E"
+                "default": "Alt+Shift+E"
             },
             "description": "Open the page source in Emacs.",
             "global": false

@@ -20,12 +20,15 @@ function storeIt() {
     var title = escapeIt(document.title);
 
     var selection = window.getSelection().toString();
-    var idx=url.indexOf("#");
-
+    var idx = url.indexOf("%23");
+    // var idx = location.href.indexOf("#");
+    
     if (selection != '')
-        title = title + ((idx != -1) ? (' — ' + url.substring(idx + 1)) : "");
-    else
         title = title + ' — ' + selection;
+    else
+        title = title + ((idx != -1) ? (' — ' + url.substring(idx + 3)) : "");
+    //title = title + ((idx != -1) ? (' — ' + location.href.substring(idx + 1)) : " —— nix");
+
     
     chrome.storage.sync.get({
         selectedTemplate: 'nql',
